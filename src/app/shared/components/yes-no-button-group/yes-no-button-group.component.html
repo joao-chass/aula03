@@ -7,6 +7,7 @@
   <label [attr.id]="id" class="label">{{ label }}</label>
   <button
     role="radio"
+    [attr.tabindex]="value === options.YES || value == null ? 0 : -1"
     [attr.aria-cecked]="value === options.YES"
     type="button"
     class="button button-yes"
@@ -17,6 +18,7 @@
   </button>
   <button
     role="radio"
+    [attr.tabindex]="value === options.NO || value == null ? 0 : -1"
     [attr.aria-cecked]="value === options.NO"
     type="button"
     class="button button-no"
