@@ -1,9 +1,28 @@
-<div class="button-group">
-  <label class="label">{{ label }}</label>
-  <button type="button" class="button button-yes" (click)="active(options.YES)" [class.button-pressed]="value === options.YES">
-    Yes
+<div
+  role="radiogroup"
+  tadiogroup
+  [attr.aria-labelledby]="id"
+  class="button-group"
+>
+  <label [attr.id]="id" class="label">{{ label }}</label>
+  <button
+    role="radio"
+    [attr.aria-cecked]="value === options.YES"
+    type="button"
+    class="button button-yes"
+    [class.button-pressed]="value === options.YES"
+    (click)="active(options.YES)"
+  >
+    SIM
   </button>
-  <button type="button" class="button button-no" (click)="active(options.NO)" [class.button-pressed]="value === options.NO">
-    No
+  <button
+    role="radio"
+    [attr.aria-cecked]="value === options.NO"
+    type="button"
+    class="button button-no"
+    (click)="active(options.NO)"
+    [class.button-pressed]="value === options.NO"
+  >
+    NÃO
   </button>
 </div>

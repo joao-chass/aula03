@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UniqueIdService } from './shared/services/unique-id/unique-id.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +13,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     YesNoButtonGroupModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [UniqueIdService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
