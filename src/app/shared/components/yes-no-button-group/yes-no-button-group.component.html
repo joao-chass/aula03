@@ -1,4 +1,5 @@
 <div
+  appKm
   role="radiogroup"
   tadiogroup
   [attr.aria-labelledby]="id"
@@ -6,6 +7,8 @@
 >
   <label [attr.id]="id" class="label">{{ label }}</label>
   <button
+    appKmItem
+    (focused)="active(options.YES)"
     role="radio"
     [attr.tabindex]="value === options.YES || value == null ? 0 : -1"
     [attr.aria-cecked]="value === options.YES"
@@ -17,6 +20,8 @@
     SIM
   </button>
   <button
+    appKmItem
+    (focused)="active(options.NO)"
     role="radio"
     [attr.tabindex]="value === options.NO || value == null ? 0 : -1"
     [attr.aria-cecked]="value === options.NO"
