@@ -1,4 +1,32 @@
-<div
+<div class="button-group" role="radiogroup" [attr.arial-label]="label">
+  <label>
+    {{ label }}
+  </label>
+  <div class="radio">
+    <input
+      [attr.id]="id + '-yes'"
+      type="radio"
+      [attr.name]="id"
+      [attr.checked]="value === options.YES"
+      (change)="active(options.YES)"
+    />
+
+    <label [attr.for]="id + '-yes'" class="button button-yes"> YES</label>
+  </div>
+
+  <div class="radio">
+    <input
+      [attr.id]="id + '-no'"
+      type="radio"
+      [attr.name]="id"
+      [attr.checked]="value === options.NO"
+      (change)="active(options.NO)"
+    />
+
+    <label [attr.for]="id + '-no'" class="button button-no"> NO</label>
+  </div>
+</div>
+<!-- <div
   appKm
   role="radiogroup"
   tadiogroup
@@ -10,6 +38,7 @@
     appKmItem
     (focused)="active(options.YES)"
     role="radio"
+    [attr.disabled]="disabled ? disabled : null"
     [attr.tabindex]="value === options.YES || value == null ? 0 : -1"
     [attr.aria-cecked]="value === options.YES"
     type="button"
@@ -23,6 +52,7 @@
     appKmItem
     (focused)="active(options.NO)"
     role="radio"
+    [attr.disabled]="disabled ? disabled : null"
     [attr.tabindex]="value === options.NO || value == null ? 0 : -1"
     [attr.aria-cecked]="value === options.NO"
     type="button"
@@ -32,4 +62,4 @@
   >
     NÃO
   </button>
-</div>
+</div> -->

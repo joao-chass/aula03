@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UniqueIdService } from './shared/services/unique-id/unique-id.service';
+import { DisableControlModule } from './shared/directives/disable-control/disable-control.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { UniqueIdService } from './shared/services/unique-id/unique-id.service';
     BrowserModule,
     YesNoButtonGroupModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DisableControlModule
   ],
   providers: [UniqueIdService],
   bootstrap: [AppComponent]
